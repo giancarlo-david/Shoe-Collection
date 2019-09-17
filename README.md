@@ -1,4 +1,4 @@
-##Shoe-Collection
+# Shoe-Collection
 
 
 This repository holds versions of a personal project I have where you can create list of your shoe collection and be able to edit 

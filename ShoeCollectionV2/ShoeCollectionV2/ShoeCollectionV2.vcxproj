@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="shoe.cpp" />
     <ClCompile Include="ShoeCollectionV2.cpp" />
+    <ClCompile Include="sortList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shoe.h" />

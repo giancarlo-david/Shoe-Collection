@@ -10,7 +10,8 @@ using namespace std;
 // Function prototypes
 void createNewCollection();
 void importCollection();
-void sortList(vector<shoe> list);
+bool compareTwoShoes(shoe a, shoe b);
+void sortList(vector<shoe> &list);
 int errorCatcherInt(int &x);
 void shoeCheck(string &x, string &y, string &z);
 void printList(vector<shoe> shoeList, int numberOfShoes);
@@ -91,7 +92,7 @@ void createNewCollection()
 		shoeList.push_back(tempShoe);
 	}
 
-	//NEED TO INSERT SORT FUNCTION HERE
+	sortList(shoeList);
 
 	printList(shoeList, numberOfShoes);
 }
@@ -99,11 +100,6 @@ void createNewCollection()
 void importCollection()
 {
 	
-}
-
-void sortList(vector<shoe> list)
-{
-
 }
 
 int errorCatcherInt(int &x)
@@ -221,4 +217,21 @@ void printList(vector<shoe> shoeList, int numberOfShoes)
 	}
 	outputFile.close();
 
+}
+
+
+bool compareTwoShoes(shoe a, shoe b)
+{
+	if (a.getBrand() != b.getBrand())
+		return a.getBrand() < b.getBrand();
+
+	if (a.getModel() != b.getModel())
+		return a.getModel() < b.getModel();
+
+	return a.getColor() < b.getColor();
+}
+
+void sortList(vector<shoe> &list)
+{
+	sort(list.begin(), list.end(), compareTwoShoes);
 }

@@ -8,8 +8,8 @@
 using namespace std;
 
 // Function prototypes
-void createNewCollection();
-void importCollection();
+void createNewCollection(vector<shoe> &shoeList, int &numberOfShoes);
+void importCollection(vector<shoe> &shoeList, int &numberOfShoes);
 bool compareTwoShoes(shoe a, shoe b);
 void sortList(vector<shoe> &list);
 int errorCatcherInt(int &x);
@@ -18,16 +18,12 @@ void printList(vector<shoe> shoeList, int numberOfShoes);
 void outputList(vector<shoe> shoeList, int numberOfShoes);
 
 // Function to create a new collection from scratch
-void createNewCollection()
+void createNewCollection(vector<shoe> &shoeList, int &numberOfShoes)
 {
 	/* Variables to hold various items
-	shoeList holds the list of shoes in the form of a vector
-	numberOfShoes holds the number of shoes the user wants to add
 	tempBrand, tempModel, tempColor all hold the current shoe's brand, model, and color respectively
 	tempShoe holds the current shoe to make it easier to add to the shoeList vector
 	*/
-	vector<shoe> shoeList;
-	int numberOfShoes;
 	string tempBrand, tempModel, tempColor;
 	shoe tempShoe;
 

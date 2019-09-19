@@ -8,8 +8,8 @@
 using namespace std;
 
 // Function prototypes
-void createNewCollection();
-void importCollection();
+void createNewCollection(vector<shoe> &shoeList, int &numberOfShoes);
+void importCollection(vector<shoe> &shoeList, int &numberOfShoes);
 bool compareTwoShoes(shoe a, shoe b);
 void sortList(vector<shoe> &list);
 int errorCatcherInt(int &x);

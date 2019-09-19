@@ -8,8 +8,8 @@
 using namespace std;
 
 // Function prototypes
-void createNewCollection();
-void importCollection();
+void createNewCollection(vector<shoe> &shoeList, int &numberOfShoes);
+void importCollection(vector<shoe> &shoeList, int &numberOfShoes);
 bool compareTwoShoes(shoe a, shoe b);
 void sortList(vector<shoe> &list);
 int errorCatcherInt(int &x);
@@ -20,14 +20,19 @@ void outputList(vector<shoe> shoeList, int numberOfShoes);
 // Main function containing the main menu for user to select options
 int main()
 {
-	// Variable intializations for exitBool (flags if user wants to exit program) and menuChoice (holds user menu choice)
+	/* Variable intializations for exitBool (flags if user wants to exit program) and menuChoice (holds user menu choice)
+   shoeList holds the list of shoes in the form of a vector
+	numberOfShoes holds the number of shoes the user wants to add
+   */
 	bool exitBool = false;
 	int menuChoice;
+   vector<shoe> shoeList;
+   int numberOfShoes = 0;
 
 	do
 	{
 		cout << "\tMain Menu" << endl;
-		cout << "1)Create new collection\n2)Import and edit an existing collection\n3)Exit\n\n";
+		cout << "1) Create new collection\n2) Import an existing collection\n3) Exit\n\n";
 		cout << "Enter the number option you would like to choose: ";
 		cin >> menuChoice;
 
@@ -35,17 +40,48 @@ int main()
 		switch (menuChoice)
 		{
 		case 1:
-			createNewCollection();
+			createNewCollection(shoeList, numberOfShoes);
 			break;
 		case 2:
-			importCollection();
+			importCollection(shoeList, numberOfShoes);
 			break;
 		case 3:
 			exitBool = true;
 			break;
 		}
 
+      if (numberOfShoes > 0)
+         break;
+
 	} while (exitBool == false);
+
+   do
+   {
+      cout << "\n\tEditing Menu" << endl;
+      cout << "1) Add Shoe\n2) Remove Shoe\n3) Show Collection\n4) Save Collection\n5) Exit\n\n";
+      cout << "Enter the number option you would like to choose: ";
+      cin >> menuChoice;
+
+      switch (menuChoice)
+      {
+      case 1:
+         //addShoe function call
+         break;
+      case 2:
+         //removeShoe function call
+         break;
+      case 3:
+         printList(shoeList, numberOfShoes);
+         break;
+      case 4:
+         outputList(shoeList, numberOfShoes);
+         break;
+      case 5:
+         exitBool = true;
+         break;
+      }
+   } while (exitBool == false);
+
 
 	system("pause");
 	exit(0);

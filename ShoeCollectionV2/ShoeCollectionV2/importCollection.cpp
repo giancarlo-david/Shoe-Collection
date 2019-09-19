@@ -55,8 +55,9 @@ void importCollection(vector<shoe> &shoeList, int &numberOfShoes)
             inputFile.ignore();
 
             // Current work around since once loop gets to end of file it reads the last line again with no brand
-            if (tempBrand == "")
+            /*if (tempBrand == "")
                break;
+            */
 
             shoeList.push_back(tempShoe);
             numberOfShoes++;

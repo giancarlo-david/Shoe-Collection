@@ -18,10 +18,22 @@
     <ClCompile Include="ShoeCollectionV2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sortList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="errorCatchers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="createCollection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="shoe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sortList.cpp">
+    <ClCompile Include="printAndOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="importCollection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

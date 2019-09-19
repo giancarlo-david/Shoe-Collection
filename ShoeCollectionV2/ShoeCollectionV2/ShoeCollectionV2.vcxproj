@@ -115,6 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="createCollection.cpp" />
+    <ClCompile Include="errorCatchers.cpp" />
+    <ClCompile Include="importCollection.cpp" />
+    <ClCompile Include="printAndOutput.cpp" />
     <ClCompile Include="shoe.cpp" />
     <ClCompile Include="ShoeCollectionV2.cpp" />
     <ClCompile Include="sortList.cpp" />

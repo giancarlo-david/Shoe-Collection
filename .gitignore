@@ -352,3 +352,5 @@ MigrationBackup/
 .ionide/
 ShoeCollectionV2/.vs/ShoeCollectionV2/v15/.suo
 *.txt
+*.db
+ShoeCollectionV2/.vs/ShoeCollectionV2/v15/.suo

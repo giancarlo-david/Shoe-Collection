@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// Boolean function that acts as the key on how the shoe list is sorted
 bool compareTwoShoes(shoe a, shoe b)
 {
 	if (a.getBrand() != b.getBrand())
@@ -18,6 +19,7 @@ bool compareTwoShoes(shoe a, shoe b)
 	return a.getColor() < b.getColor();
 }
 
+// Function that sorts the current list
 void sortList(vector<shoe> &list)
 {
 	sort(list.begin(), list.end(), compareTwoShoes);

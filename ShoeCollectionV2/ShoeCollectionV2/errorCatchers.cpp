@@ -19,9 +19,13 @@ void outputList(vector<shoe> shoeList, int numberOfShoes);
 void addShoe(vector<shoe> &shoeList, int &numberOfShoes);
 void removeShoe(vector<shoe> &shoeList, int &numberOfShoes);
 
+// Function to make sure that the user entered the right number
 int errorCatcherInt(int &x)
 {
+   
 	char yn;
+   // Do while loop that checks if the user meant to enter the number, if not then they can enter the number that they want to
+   // Repeats until the user declares that the right number has been entered. 
 	do
 	{
 		cout << "\nIs " << x << " the correct number? (Y/N): ";
@@ -45,6 +49,8 @@ int errorCatcherInt(int &x)
 	return x;
 }
 
+// Function to check with user if the properties they entered are correct, if not the user re-enters the information
+// Repeats until user is satisfied with the shoe they are entering
 void shoeCheck(string &x, string &y, string &z)
 {
 	char yn;

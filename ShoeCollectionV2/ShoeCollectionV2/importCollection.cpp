@@ -19,16 +19,20 @@ void outputList(vector<shoe> shoeList, int numberOfShoes);
 void addShoe(vector<shoe> &shoeList, int &numberOfShoes);
 void removeShoe(vector<shoe> &shoeList, int &numberOfShoes);
 
+// Function that imports a collection that was previously made and saved via txt file
 void importCollection(vector<shoe> &shoeList, int &numberOfShoes)
 {
    string fileName, fileNameHolder;
    ifstream inputFile;
 
+   // Prompts the user to enter the name of the file that they are trying to access
    cout << "What is the name of your saved collection? (Exclude .txt): ";
    cin.ignore();
    getline(cin, fileNameHolder);
    fileName = fileNameHolder + ".txt";
 
+   // Try statement that checks to see if the file that the user is trying to open exists
+   // If it does then it imports all the shoes that are saved within that file ore else it throws an exception
    try
    {
       cout << "Loading collection..." << endl;
@@ -55,6 +59,7 @@ void importCollection(vector<shoe> &shoeList, int &numberOfShoes)
             getline(inputFile, tempColor, '|');
             tempShoe.setColor(tempColor);
 
+            // Honestly not sure why I have to do this, but without it the import takes the shoes in wrong
             getline(inputFile, ignored, '\n');
 
             shoeList.push_back(tempShoe);
@@ -67,6 +72,7 @@ void importCollection(vector<shoe> &shoeList, int &numberOfShoes)
          throw 1;
    }
 
+   // Catches the exception letting the user know the file they are trying to access was not found, then returns to main menu
    catch (int x)
    {
       cout << "File not found! Returning to main menu" << endl << endl;

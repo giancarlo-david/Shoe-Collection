@@ -53,17 +53,20 @@ int main()
 			break;
 		}
 
+      // If statement to go on to the editing menu when there is a list that is already held by the program
       if (numberOfShoes > 0)
          break;
 
 	} while (exitBool == false);
 
+   // If statement to exit the program should the user want to exit from the main menu
    if (exitBool == true)
    {
       system("pause");
       exit(0);
    }
 
+   // Editing menu for the user to access once the program contains a list of shoes
    do
    {
       cout << "\n\tEditing Menu" << endl;
@@ -71,6 +74,7 @@ int main()
       cout << "Enter the number option you would like to choose: ";
       cin >> menuChoice;
 
+      // Switch menu that calls a function based on user choice
       switch (menuChoice)
       {
       case 1:

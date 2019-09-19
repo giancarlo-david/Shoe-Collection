@@ -38,7 +38,7 @@ void createNewCollection(vector<shoe> &shoeList, int &numberOfShoes)
 	//  and adds each shoe to the shoeList vector 
 	for (int i = 0; i < numberOfShoes; i++)
 	{
-
+      // Prompts the user to enter the properties of the shoe they are currently adding
 		cout << "Enter the brand of shoe #" << i + 1 << ": ";
 		cin.ignore();
 		getline(cin, tempBrand);
@@ -49,6 +49,7 @@ void createNewCollection(vector<shoe> &shoeList, int &numberOfShoes)
 
 		shoeCheck(tempBrand, tempModel, tempColor);
 
+      // Sets the properties of the temporary shoe based on user input then places the temporary shoe at the end of the vector
 		tempShoe.setBrand(tempBrand);
 		tempShoe.setModel(tempModel);
 		tempShoe.setColor(tempColor);

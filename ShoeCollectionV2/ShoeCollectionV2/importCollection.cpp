@@ -43,6 +43,7 @@ void importCollection(vector<shoe> &shoeList, int &numberOfShoes)
 
          while (!inputFile.eof())
          {
+            string ignored;
             getline(inputFile, tempBrand, '|');
             tempShoe.setBrand(tempBrand);
 
@@ -52,12 +53,7 @@ void importCollection(vector<shoe> &shoeList, int &numberOfShoes)
             getline(inputFile, tempColor, '|');
             tempShoe.setColor(tempColor);
 
-            inputFile.ignore();
-
-            // Current work around since once loop gets to end of file it reads the last line again with no brand
-            /*if (tempBrand == "")
-               break;
-            */
+            getline(inputFile, ignored, '\n');
 
             shoeList.push_back(tempShoe);
             numberOfShoes++;

@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="addShoe.cpp" />
     <ClCompile Include="createCollection.cpp" />
     <ClCompile Include="errorCatchers.cpp" />
     <ClCompile Include="importCollection.cpp" />

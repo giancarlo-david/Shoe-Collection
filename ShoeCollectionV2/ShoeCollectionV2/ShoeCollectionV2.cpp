@@ -3,6 +3,7 @@
 #include <vector>
 #include <fstream>
 #include <algorithm>
+#include <stdlib.h>
 #include "shoe.h"
 
 using namespace std;
@@ -16,6 +17,8 @@ int errorCatcherInt(int &x);
 void shoeCheck(string &x, string &y, string &z);
 void printList(vector<shoe> shoeList, int numberOfShoes);
 void outputList(vector<shoe> shoeList, int numberOfShoes);
+void addShoe(vector<shoe> &shoeList, int &numberOfShoes);
+void removeShoe(vector<shoe> &shoeList, int &numberOfShoes);
 
 // Main function containing the main menu for user to select options
 int main()
@@ -55,6 +58,12 @@ int main()
 
 	} while (exitBool == false);
 
+   if (exitBool == true)
+   {
+      system("pause");
+      exit(0);
+   }
+
    do
    {
       cout << "\n\tEditing Menu" << endl;
@@ -65,10 +74,10 @@ int main()
       switch (menuChoice)
       {
       case 1:
-         //addShoe function call
+         addShoe(shoeList, numberOfShoes);
          break;
       case 2:
-         //removeShoe function call
+         removeShoe(shoeList, numberOfShoes);
          break;
       case 3:
          printList(shoeList, numberOfShoes);

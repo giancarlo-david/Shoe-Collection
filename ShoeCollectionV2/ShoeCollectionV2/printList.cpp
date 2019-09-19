@@ -16,6 +16,8 @@ int errorCatcherInt(int &x);
 void shoeCheck(string &x, string &y, string &z);
 void printList(vector<shoe> shoeList, int numberOfShoes);
 void outputList(vector<shoe> shoeList, int numberOfShoes);
+void addShoe(vector<shoe> &shoeList, int &numberOfShoes);
+void removeShoe(vector<shoe> &shoeList, int &numberOfShoes);
 
 void printList(vector<shoe> shoeList, int numberOfShoes)
 {
